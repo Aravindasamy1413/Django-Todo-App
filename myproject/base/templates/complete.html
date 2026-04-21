@@ -1,0 +1,39 @@
+{% extends "main.html" %}
+
+{% block content %}
+<div class="head">
+<h1>This Is Complete Page</h1>
+</div>
+<div class="home">
+<center>
+    {% for i in data %}
+    <h1>{{i.user_task_id}} // {{i.title}} // {{i.desc}} // {{ i.created_at|date:"d M Y H:i" }}</h1>
+
+    <div class="homeall">
+    <button>
+    <a href="{% url 'complete_delete' i.id %}">Delete
+    </a></button>
+
+    <button>
+    <a href="{% url 'complete_delete_all' %}">
+        Delete All
+    </a></button>
+
+
+    <button>
+    <a href="{% url 'crestore' i.id %}">
+        Restore
+    </a>
+    </button>
+
+    <button>
+    <a href="{% url 'crestore_all' %}">
+        Restore all
+    </a>
+    </button>
+    
+    </div>
+    {% endfor %}
+</center>
+</div>
+{% endblock  %}

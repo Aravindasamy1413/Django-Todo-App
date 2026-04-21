@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+
+{% block content %}
+<div class="head">
+<h1>This Is Task Page</h1>
+</div>
+<div class="home">
+<center>
+    {% for i in data %}
+    <h1> {{i.user_task_id}} / {{i.title}} / {{i.desc}} / {{ i.created_at|date:"M d, Y, h:i A" }} </h1><br>
+    
+    <button><a href="{% url 'update' i.id %}">EDIT</a></button>
+
+    <button><a href="{% url 'complete_' i.id %}">COMPLETE</a></button>
+
+    <button><a href="{% url 'delete_' i.id %}">DELETE</a></button><br><br>
+
+    {% endfor %}
+    <div class="homeall">
+    {% if data %}
+    <button>
+    <a href="{% url 'complete_all' %}">COMPLETE ALL</a></button>
+    
+    <button>
+    <a href="{% url 'delete_all' %}">DELETE ALL</a></button>
+    {% endif %}
+    </div>
+</center>
+</div>
+{% endblock  %}

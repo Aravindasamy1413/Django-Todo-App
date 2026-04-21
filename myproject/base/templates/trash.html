@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+
+{% block content %}
+<div class="head">
+<h1>This Is Trash Page</h1>
+</div>
+<div class="home">
+<center>
+    {% for i in data %}
+    
+    <h1>{{i.user_task_id}} // {{i.title}} // {{i.desc}} // {{ i.created_at|date:"d M Y H:i" }}</h1>
+
+    <div class="homeall">
+
+    <button><a href="{% url 'trash_delete' i.id %}">Delete</a></button>
+
+    <button><a href="{% url 'trash_restore' i.id %}">Restore</a></button>
+
+    <button><a href="{% url 'trash_delete_all' %}">Delete All</a></button>
+
+    <button><a href="{% url 'trash_restore_all' %}">Restore All</a></button>
+
+</div>
+    {% endfor %}
+</center>
+</div>
+{% endblock  %}

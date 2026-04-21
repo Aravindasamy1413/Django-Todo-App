@@ -1,0 +1,285 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* BODY */
+body{
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    min-height:100vh;
+    animation: fadeIn 1s ease-in;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+@keyframes slideUp {
+    from {transform:translateY(50px); opacity:0;}
+    to {transform:translateY(0); opacity:1;}
+}
+
+@keyframes scaleHover {
+    from {transform:scale(1);}
+    to {transform:scale(1.05);}
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.logo h1{
+    color:#38bdf8;
+    letter-spacing:2px;
+}
+
+.links a{
+    margin:0 15px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.links a:hover{
+    color:#38bdf8;
+    transform:translateY(-2px);
+}
+
+/* HEADINGS */
+.head h1{
+    text-align:center;
+    margin:30px 0;
+    font-size:32px;
+    color:#38bdf8;
+    animation: slideUp 0.8s ease;
+}
+
+/* COMMON CARD STYLE */
+.formadd,
+.home,
+form{
+    animation: slideUp 0.8s ease;
+}
+
+/* ================= ADD PAGE ================= */
+.formadd{
+    width: 100%;
+    max-width: 500px;   /* responsive limit */
+    margin: 40px auto;  /* center properly */
+    padding: 40px;
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
+    animation: slideUp 0.8s ease;
+}
+
+.formadd form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.formadd label{
+    font-size:18px;
+    color:#cbd5f5;
+}
+
+.formadd input{
+    padding:10px;
+    border-radius:8px;
+    border:none;
+    outline:none;
+    background:#1e293b;
+    color:#fff;
+}
+
+.formadd input:focus{
+    border:1px solid #38bdf8;
+}
+
+.formadd button{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(45deg,#38bdf8,#6366f1);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.formadd button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px #38bdf8;
+}
+
+/* ================= HOME / COMPLETE / TRASH ================= */
+.home{
+    width:90%;
+    margin:auto;
+    padding:20px;
+}
+
+/* TASK CARD */
+.home h1{
+    font-size:16px;
+    background: rgba(255,255,255,0.05);
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:10px;
+    transition:0.3s;
+}
+
+.home h1:hover{
+    transform:scale(1.02);
+    background: rgba(56,189,248,0.2);
+}
+
+/* BUTTONS */
+button{
+    border:none;
+    border-radius:8px;
+    padding:10px 15px;
+    margin:5px;
+    cursor:pointer;
+    background: linear-gradient(45deg,#6366f1,#38bdf8);
+    transition:0.3s;
+}
+
+button a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 10px #38bdf8;
+}
+
+/* ================= LOGIN / REGISTER ================= */
+form{
+    width:300px;
+    margin:50px auto;
+    padding:30px;
+    border-radius:15px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+}
+
+form input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+    background:#1e293b;
+    color:white;
+}
+
+form input:focus{
+    border:1px solid #38bdf8;
+}
+
+form button{
+    width:100%;
+}
+
+/* ================= NOTES ================= */
+.head form{
+    margin:auto;
+    width:400px;
+}
+
+.head form input{
+    width:100%;
+}
+
+/* NOTE CARD */
+.head div{
+    background: rgba(255,255,255,0.05);
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:10px;
+    transition:0.3s;
+}
+
+.head div:hover{
+    transform:translateY(-3px);
+    background: rgba(56,189,248,0.2);
+}
+
+/* ================= UPDATE / EDIT ================= */
+center form{
+    width:400px;
+    padding:30px;
+    background: rgba(255,255,255,0.05);
+    border-radius:15px;
+}
+
+/* LINKS */
+a{
+    text-decoration:none;
+    color:#38bdf8;
+}
+
+
+/* NOTES ACTION LINKS */
+.head div a{
+   color: #38bdf8;
+}
+
+/* HOVER EFFECT */
+.head div a:hover{
+    background:#38bdf8;
+    color:#fff;
+    transform:scale(1.05);
+    border-radius: 1px;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .links{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .formadd,
+    form,
+    center form{
+        width:90%;
+    }
+
+    .home{
+        width:95%;
+    }
+}
+
+

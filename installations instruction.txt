@@ -1,0 +1,62 @@
+📁 Step 1: Create a New Folder
+
+Create a new folder for your project and move into it:
+
+mkdir myproject_setup
+cd myproject_setup
+
+
+🐍 Step 2: Create Virtual Environment
+
+Create a virtual environment:
+
+python -m venv venv
+
+
+▶️ Step 3: Activate Virtual Environment
+
+For Windows:
+
+venv\Scripts\activate
+
+For macOS/Linux:
+
+source venv/bin/activate
+
+
+📦 Step 4: Add Project Files
+Extract the project ZIP file
+Copy and paste the extracted myproject folder inside your newly created folder
+
+
+📂 Step 5: Navigate to Project Directory
+cd myproject
+
+
+📥 Step 6: Install Dependencies
+
+Install all required packages using:
+
+pip install -r requirements.txt
+
+
+🗄️ Step 7: Apply Migrations
+python manage.py migrate
+
+
+▶️ Step 8: Run the Development Server
+python manage.py runserver
+
+
+🌐 Step 9: Open in Browser
+
+Go to:
+
+http://127.0.0.1:8000/
+
+
+✅ Notes
+Make sure you are connected to a stable internet connection while installing dependencies
+Make sure Python is installed on your system.
+Always activate the virtual environment before running the project.
+If any error occurs, check requirements.txt and install missing packages manually.

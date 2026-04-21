@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+
+{% block content %}
+<div class="head">
+<h1>This Is Add Page</h1>
+</div>
+<center>
+    <div class="formadd">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="">TITLE</label>
+        <input type="text" name="title" id="" required><br><br>
+
+        <label for="">DESC</label>
+        <input type="text" name="desc" id="" required><br><br>
+
+        <button type="submit">SUBMIT</button>
+    </form>
+    </div>
+</center>
+{% endblock  %}
